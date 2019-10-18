@@ -1,4 +1,4 @@
- const BaseItems=[
+ const BaseItems = [
     "BF": {id: "BF", name: "B.F. Sword"},
     "CV": {id: "CV", name: "Chain Vest"},
     "GB": {id: "GB", name: "Giant's Belt"},
