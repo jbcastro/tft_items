@@ -5,6 +5,7 @@
     "NC": {id: "NC", name: "Negatron Cloak"},
     "NLR": {id: "NLR", name: "Needlessly Large Rod"},
     "RB": {id: "RB", name: "Recurve Bow"},
+    "SG": {id: "SG", name: "Sparring Gloves"},
     "Spat": {id: "Spat", name: "Spatula"},
     "Tear": {id: "Tear", name: "Tear of the Goddess"}
  ]
