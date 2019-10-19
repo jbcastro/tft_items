@@ -1,8 +1,65 @@
-export const Champions=[
-    {name:"B.F Sword", id:"BF"},
-    {name:"Chain Vest", id:"CV"}
+export const Champions = [
+    "Kha'Zix": {name: "Kha'Zix", items: "['RBRB', 'BFBF', 'TearTear', 'NLRTear']"},
+    "Pyke": {name: "Pyke", items: "['BFTear', 'CVTear', 'GBNLR', 'SpatTear']"},
+    "Zed": {name: "Zed", items: "['RBRB', 'BFBF', 'BFNC', 'BFGB']"},
+    "Katarina": {name: "Katarina", items: "['GBNLR', 'BFNLR', 'NLRNLR', 'NLRSpat']"},
+    "Evelynn": {name: "Evelynn", items: "['TearTear', 'GBNLR', 'NLRNLR', 'NLRSpat']"},
+    "Rengar": {name: "Rengar", items: "['RBRB', 'BFCV', 'BFNC', 'NCNC']"},
+    "Akali": {name: "Akali", items: "['TearTear', 'NCNC', 'BFNLR', 'CVRB', 'GBGB', 'BFCV']"},
+    "Camille": {name: "Camille", items: "[]"},
+    "Fiora": {name: "Fiora", items: "['RBTear', 'BFNLR', 'BFNC', 'RBRB']"},
+    "Shen": {name: "Shen", items: "['NCNC', 'CVCV', 'BFCV', 'GBGB']"},
+    "Aatrox": {name: "Aatrox", items: "['BFNLR', 'BFCV', 'NCNC', 'CVRB', 'NLRSpat']"},
+    "Gangplank": {name: "Gangplank", items: "['NCTear', 'GBCV', 'GBNLR', 'BFTear', 'BFCV', 'CVNC']"},
+    "Draven": {name: "Draven", items: "['RBRB', 'BFNC', 'NLRRB', 'NCNC', 'BFBF', 'CVRB', 'BFCV']"},
+    "Yasuo": {name: "Yasuo", items: "['TearTear', 'CVGB', 'GBGB', 'NCTear', 'CVNC', 'NCNC']"},
+    "Lissandra": {name: "Lissandra", items: "[]"},
+    "Kennen": {name: "Kennen", items: "['GBNLR', 'BFCV', 'NLRNLR', 'NCNC', 'CVRB']"},
+    "Brand": {name: "Brand", items: "['BFTear', 'RBRB', 'GBNLR']"},
+    "Anivia": {name: "Anivia", items: "['GBNLR', 'NLRNLR', 'TearTear']"},
+    "Warwick": {name: "Warwick", items: "[]"},
+    "Vi": {name: "Vi", items: "['CVTear', 'GBGB', 'NLRSpat', 'GBNLR', 'BFTear']"},
+    "Rek'Sai": {name: "Rek'Sai", items: "['BFTear', 'NLRRB', 'RBRB', 'CVRB', 'GBGB', 'BFCV']"},
+    "Blitzcrank": {name: "Blitzcrank", items: "['NLRNLR', 'BFTear']"},
+    "Volibear": {name: "Volibear", items: "['RBRB', 'SpatTear', 'BFBF', 'GBRB', 'NCSpat', 'GBCV', 'BFNC']"},
+    "Cho'Gath": {name: "Cho'Gath", items: "['TearTear', 'BFCV', 'GBNLR', 'NLRNLR', 'RBRB', 'NLRSpat']"},
+    "Vayne": {name: "Vayne", items: "['RBTear', 'GBRB', 'RBRB', 'NLRRB']"},
+    "Varus": {name: "Varus", items: "['BFTear', 'GBNLR', 'NLRRB', 'RBTear', 'NLRNLR', 'NLRSpat']"},
+    "Ashe": {name: "Ashe", items: "['RBTear', 'RBRB', 'NLRRB', 'BFTear']"},
+    "Kindred": {name: "Kindred", items: "['NLRSpat', 'BFCV', 'CVRB', 'RBTear']"},
+    "Graves": {name: "Graves", items: "['CVGB', 'GBRB', 'BFBF']"},
+    "Jinx": {name: "Jinx", items: "['NCSpat', 'RBSpat', 'RBRB', 'BFNC', 'NLRRB', 'CVGB']"},
+    "Tristana": {name: "Tristana", items: "['NCRB', 'NCTear', 'RBSpat', 'BFBF', 'GBRB']"},
+    "Lucian": {name: "Lucian", items: "['NCRB', 'NCTear', 'CVGB', 'NLRTear', 'CVNC', 'TearTear']"},
+    "Miss Fortune": {name: "Miss Fortune", items: "['TearTear', 'GBNLR', 'BFCV']"},
+    "Darius": {name: "Darius", items: "['GBGB', 'NCNC']"},
+    "Garen": {name: "Garen", items: "['NCNC', 'GBGB', 'CVRB', 'GBNLR']"},
+    "Mordekaiser": {name: "Mordekaiser", items: "[]"},
+    "Poppy": {name: "Poppy", items: "['NLRSpat', 'NCNC', 'CVRB', 'GBGB', 'NCNLR']"},
+    "Sejuani": {name: "Sejuani", items: "['GBNLR', 'BFCV', 'NCNC', 'CVRB', 'GBGB']"},
+    "Kayle": {name: "Kayle", items: "['RBSpat', 'NLRSpat', 'BFTear', 'RBTear', 'NCSpat', 'NLRRB', 'RBRB']"},
+    "Braum": {name: "Braum", items: "['CVCV', 'NCNC', 'GBGB']"},
+    "Leona": {name: "Leona", items: "['NLRTear', 'TearTear']"},
+    "Kassadin": {name: "Kassadin", items: "['RBRB', 'NLRRB', 'NCNC', 'CVRB', 'BFNC', 'NLRNLR']"},
+    "Ahri": {name: "Ahri", items: "['RBTear', 'NLRTear', 'TearTear', 'GBNLR', 'NLRNLR']"},
+    "Twisted Fate": {name: "Twisted Fate", items: "['RBTear', 'TearTear', 'NLRTear', 'RBRB']"},
+    "Lulu": {name: "Lulu", items: "['BFTear', 'NLRRB', 'NLRNLR', 'NCNLR']"},
+    "Veigar": {name: "Veigar", items: "['TearTear', 'BFNLR', 'NCNC', 'CVRB', 'RBRB']"},
+    "Morgana": {name: "Morgana", items: "['NLRNLR', 'GBNLR', 'CVTear', 'TearTear', 'NCNC', 'BFCV']"},
+    "Aurelion Sol": {name: "Aurelion Sol", items: "['RBRB', 'BFTear', 'NLRNLR', 'GBNLR']"},
+    "Karthus": {name: "Karthus", items: "['GBNLR', 'NLRNLR', 'BFTear', 'TearTear']"},
+    "Nidalee": {name: "Nidalee", items: "['RBRB', 'RBTear', 'BFNC']"},
+    "Elise": {name: "Elise", items: "['GBGB', 'CVTear']"},
+    "Jayce": {name: "Jayce", items: "[]"},
+    "Shyvana": {name: "Shyvana", items: "['GBGB', 'CVCV', 'CVRB', 'RBRB', 'BFNC', 'NLRRB']"},
+    "Gnar": {name: "Gnar", items: "['GBGB', 'GBRB', 'CVRB', 'NCNC']"},
+    "Swain": {name: "Swain", items: "['GBGB', 'NLRNLR', 'BFNLR', 'GBNLR', 'BFCV', 'TearTear', 'NCNC', 'CVRB']"}
 ]
 
 export default Champions
 
-    
+// note that the champion array uses values "name" and "items" (for item ids that are good on that champion), rather than the id+name syntax the item arrays have
+
+// also note that this list is INCOMPLETE and completely un-updated.  
+// When I find an up-to-date guide on pro-player choices for items in the current patch I will go through and update this list
+// For now I added the un-updated list so you have SOMETHING to work with to code around if you get to a point where you want to start implementing champion recommendation
