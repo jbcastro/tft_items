@@ -2,13 +2,17 @@ import React from "react";
 
 
 const Test =(props)=>{
-   const champions = props.champions
-   console.log(champions)
+   
+  const baseitems = props.baseitems
+  const fullitems = props.fullitems
+  const champions = props.champions
+  
+  const baseitemslist = baseitems.map((item)=>
+  <li key={item.id}><button>{item.name}</button></li>
+  )
    return(
       <div>
-         {champions.map(item=>{
-            return console.log(item)
-         })}
+       <ul>{baseitemslist}</ul> 
 
 
       </div> 
