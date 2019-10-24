@@ -7,6 +7,7 @@ import FullItems from "./FullItems"
 import Champions from "./Champions"
 import Base from "./components/Base"
 
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -17,9 +18,13 @@ class App extends Component {
       userInventory:[], 
       userFullItems:[],
       userChampions:[]
+    
     }
+    
     this.onBaseItemClick = this.onBaseItemClick.bind(this)
     this.onSetBaseClick = this.onSetBaseClick.bind(this)
+    this.onClear = this.onClear.bind(this)
+    
   }
   onBaseItemClick=e=>{
   let id = e.target.id
@@ -28,15 +33,28 @@ class App extends Component {
     this.setState(previousState => ({
       userInventory: [...previousState.userInventory, id]
   }));    
+
+  
     
 
     
   }
+
+
+
   onSetBaseClick=()=>{
+    
+
+    this.setState({userFullItems:[]})
+    this.setState({userChampions:[]})
+    
     let userFulls =[]
     const userInventory = this.state.userInventory;
     const fullitems = this.state.fullitems
     const champions = this.state.champions
+    
+    
+    
     userInventory.sort()
     console.log(userInventory);
     //add base items together
@@ -55,33 +73,79 @@ class App extends Component {
    const fullItemFilter =userFullItems.map(item=>
     fullitems.filter(result=>result.id===item)
     )
-    const fullItemFlat =fullItemFilter.flat(Infinity)
+    const fullItemFlat = fullItemFilter.flat(Infinity)
    this.setState({userFullItems:fullItemFlat})
 
    //get champions
-   
-   
+const recommendedChamps = []
 
-   
-let recommendedChamps = []
+// reset champ counts to 0
+for (let i=0; i<champions.length; i++) {
+  champions[i].count = 0;
+}
+
 for (let i=0; i<userFullItems.length; i++) {
     recommendedChamps.push(champions.filter(champ => {
-        return champ.items.indexOf(userFullItems[i]) > -1;
+      
+        if(champ.items.indexOf(userFullItems[i]) > -1){
+           champ.count ++;
+            return true
+          
+          
+        }
         })
     )
 }
+
 console.log(recommendedChamps);
 
 const recommendedChampsFlat = recommendedChamps.flat(Infinity)
 console.log(recommendedChampsFlat)
+
+// const kitty = recommendedChampsFlat.sort(function(a, b) {
+//   var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+//   var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+//   if (nameA < nameB) {
+//     return -1;
+//   }
+//   if (nameA > nameB) {
+//     return 1;
+//   }
+
+//   // names must be equal
+//   return 0;
+// });
+// console.log(kitty)
+recommendedChampsFlat.sort(function(a,b){
+ return b.count-a.count
+})
+
+
 const recommendedChampsSet = new Set(recommendedChampsFlat)
 const recommendedChampsList = [...recommendedChampsSet]
 
 
 console.log(recommendedChampsList)
 this.setState({userChampions:recommendedChampsList})
-  
+
+// const champUnCount = this.state.champUnCount
+// this.setState({champions:champUnCount})
+
+
+
     
+  }
+
+  //
+  //
+  //
+  //
+  onClear=()=>{
+
+   
+    this.setState({userInventory:[]})
+    this.setState({userFullItems:[]})
+    this.setState({userChampions:[]})
   }
   render(){
   return (
@@ -94,6 +158,8 @@ this.setState({userChampions:recommendedChampsList})
     onSetBaseClick={this.onSetBaseClick}
     userFullItems={this.state.userFullItems}
     userChampions={this.state.userChampions}
+    onClear={this.onClear}
+    userInventory={this.state.userInventory}
     />
     </div>
   );
