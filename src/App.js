@@ -32,18 +32,15 @@ class App extends Component {
   }
   onSetBaseClick=()=>{
     let userFulls =[]
-   const userInventory = this.state.userInventory;
-   userInventory.sort()
-   userInventory.forEach(combineSameItems)
-  //  userInventory.forEach(combineOtherItems)
-  
-   function combineSameItems(item){
-     userFulls.push(item+item)
-   }
-
-   for(var i =0; i<userInventory;i++){
-     console.log(i)
-   }
+    const userInventory = this.state.userInventory;
+    userInventory.sort()
+    console.log(userInventory);
+    for (var i=0; i < (userInventory.length-1); i++) {
+      for (var j=(i+1); j < userInventory.length; j++) {
+        userFulls.push(userInventory[i]+userInventory[j]);
+      }
+    }
+    console.log(userFulls);
 
   //  function combineOtherItems(item){
   //    let index = userInventory.indexOf(item)
